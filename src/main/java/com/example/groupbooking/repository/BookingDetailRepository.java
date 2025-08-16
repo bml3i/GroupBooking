@@ -13,4 +13,6 @@ public interface BookingDetailRepository extends JpaRepository<BookingDetail, Bo
     List<BookingDetail> findByFileId(Integer fileId);
     
     List<BookingDetail> findByStatus(String status);
+    
+    BookingDetail findByFileIdAndRowNum(Integer fileId, Integer rowNum);
 }

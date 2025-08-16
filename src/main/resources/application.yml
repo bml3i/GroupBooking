@@ -19,9 +19,14 @@ spring:
         format_sql: true
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   
+  # 启用Spring Batch表的自动初始化
+  batch:
+    jdbc:
+      initialize-schema: always
+  
   sql:
     init:
-      mode: never
+      mode: always
 
 server:
   port: 8080
