@@ -10,7 +10,8 @@ spring:
   
   jpa:
     hibernate:
-      ddl-auto: validate
+      # 改为 none 或 update，而不是 validate
+      ddl-auto: none
     show-sql: true
     properties:
       hibernate:

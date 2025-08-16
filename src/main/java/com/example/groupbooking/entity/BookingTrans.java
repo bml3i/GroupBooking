@@ -35,7 +35,8 @@ public class BookingTrans {
     @Column(name = "retry_cnt", nullable = false)
     private Integer retryCnt = 0;
     
-    @Column(name = "status", nullable = false, length = 1)
+    // 修正：使用 CHAR 类型而不是 VARCHAR
+    @Column(name = "status", nullable = false, length = 1, columnDefinition = "CHAR(1)")
     private String status;
     
     @ManyToOne(fetch = FetchType.LAZY)

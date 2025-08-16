@@ -24,7 +24,8 @@ public class BookingDetail {
     @Column(name = "row_num")
     private Integer rowNum;
     
-    @Column(name = "hotel_code", nullable = false, length = 5)
+    // 修正：使用 CHAR 类型而不是 VARCHAR
+    @Column(name = "hotel_code", nullable = false, length = 5, columnDefinition = "CHAR(5)")
     private String hotelCode;
     
     @Column(name = "arrivial_dt", nullable = false)
@@ -33,13 +34,15 @@ public class BookingDetail {
     @Column(name = "departure_dt", nullable = false)
     private LocalDate departureDt;
     
-    @Column(name = "room_type", nullable = false, length = 4)
+    // 修正：使用 CHAR 类型而不是 VARCHAR
+    @Column(name = "room_type", nullable = false, length = 4, columnDefinition = "CHAR(4)")
     private String roomType;
     
     @Column(name = "guest_name", nullable = false, length = 100)
     private String guestName;
     
-    @Column(name = "status", nullable = false, length = 1)
+    // 修正：使用 CHAR 类型而不是 VARCHAR
+    @Column(name = "status", nullable = false, length = 1, columnDefinition = "CHAR(1)")
     private String status;
     
     @Column(name = "error_msg", length = 500)
